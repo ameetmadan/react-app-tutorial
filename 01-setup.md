@@ -67,7 +67,6 @@ As you can see, this pattern significantly reduces code complexity.
 With unified linting rules a team can agree on the same coding style.
 This increases the code readability for each individual team member and therefore increases productivity.
 
-Install prettier with the command `npm install prettier`.
 
 Luckily create-react-app comes with installed linting packages out of the box.
 I suggest integrating an automatic lint fixing process in your CI pipeline.
@@ -77,7 +76,7 @@ To be able to automatically format your code, let's add `prettier`
 which goes hand in hand with the already installed `eslint`:
 
 ```
-npm install eslint-plugin-prettier@latest --save-dev
+npm install prettier eslint-plugin-prettier@latest --save-dev
 ```
 
 Just extend the `eslintConfig` in your `package.json` like so:

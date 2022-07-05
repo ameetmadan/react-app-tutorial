@@ -7,6 +7,7 @@ import { IndexPage } from '@pages/IndexPage';
 import { RegisterPage } from '@pages/auth/RegisterPage';
 import { MySettingsPage } from '@pages/user-management/MySettingsPage';
 import { NotFoundPage } from '@pages/NotFoundPage';
+import { useI18nManager } from '@packages/core/i18n';
 
 function AppRoutes() {
     const currentUser = useCurrentUser();
@@ -23,9 +24,14 @@ function AppRoutes() {
 
 function App() {
     const currentUserRepo = useCurrentUserRepository();
+    const i18nManager = useI18nManager();
+
     useEffect(() => {
         currentUserRepo.init();
     }, [currentUserRepo]);
+    useEffect(() => {
+        i18nManager.init();
+    }, [i18nManager]);
     return <AppRoutes />;
 }
 

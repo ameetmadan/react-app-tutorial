@@ -21,7 +21,10 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@packages/*": ["src/packages/*"]
+      "@packages/*": ["src/packages/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/components/pages/*"],
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
     }
   },
   "include": [

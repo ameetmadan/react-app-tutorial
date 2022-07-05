@@ -1,49 +1,23 @@
 // src/App.tsx
 
-import React, { MouseEvent, useEffect } from 'react';
-import { anonymousAuthUser, useCurrentUser, useCurrentUserRepository } from '@packages/core/auth';
+import { useEffect } from 'react';
+import { useCurrentUser, useCurrentUserRepository } from '@packages/core/auth';
+import { Route, Routes } from 'react-router-dom';
+import { IndexPage } from '@pages/IndexPage';
+import { RegisterPage } from '@pages/auth/RegisterPage';
+import { MySettingsPage } from '@pages/user-management/MySettingsPage';
+import { NotFoundPage } from '@pages/NotFoundPage';
 
-function CurrentUserPlayground() {
-    const currentUserRepo = useCurrentUserRepository();
+function AppRoutes() {
     const currentUser = useCurrentUser();
-    const isLoggedIn = currentUser.type === 'authenticated';
-    function loginUser(event: MouseEvent<HTMLAnchorElement>) {
-        event.preventDefault();
-        currentUserRepo.setCurrentUser({
-            type: 'authenticated',
-            apiKey: 'foo',
-            data: {
-                id: 'foo',
-                username: 'Linus',
-            },
-        });
-    }
-    function logoutUser(event: MouseEvent<HTMLAnchorElement>) {
-        event.preventDefault();
-        currentUserRepo.setCurrentUser(anonymousAuthUser);
-    }
+    const isUserLoggedIn = currentUser.type === 'authenticated';
     return (
-        <div className="App">
-            <div
-                style={{
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    width: '600px',
-                    textAlign: 'center',
-                }}>
-                {!isLoggedIn && (
-                    <a href="#" onClick={loginUser}>
-                        login
-                    </a>
-                )}
-                {isLoggedIn && (
-                    <a href="#" onClick={logoutUser}>
-                        logout
-                    </a>
-                )}
-                :: {currentUser.type === 'authenticated' ? currentUser.data.username : 'Anonymous'}
-            </div>
-        </div>
+        <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route path="/auth/register" element={<RegisterPage />} />
+            {isUserLoggedIn && <Route path="/user-management/my-settings" element={<MySettingsPage />} />}
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
     );
 }
 
@@ -52,7 +26,7 @@ function App() {
     useEffect(() => {
         currentUserRepo.init();
     }, [currentUserRepo]);
-    return <CurrentUserPlayground />;
+    return <AppRoutes />;
 }
 
 export default App;

@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noUnusedLocals": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,7 +24,7 @@
     "paths": {
       "@packages/*": ["src/packages/*"],
       "@components/*": ["src/components/*"],
-      "@pages/*": ["src/components/pages/*"],
+      "@pages/*": ["src/pages/*"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
     }
   },

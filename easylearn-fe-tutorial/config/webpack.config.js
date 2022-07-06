@@ -312,7 +312,7 @@ module.exports = function (webpackEnv) {
       alias: {
         "@packages": path.resolve(__dirname, '../src/packages'),
         "@components": path.resolve(__dirname, '../src/components'),
-        "@pages": path.resolve(__dirname, '../src/components/pages'),
+        "@pages": path.resolve(__dirname, '../src/pages'),
         '@mui/styled-engine': '@mui/styled-engine-sc',
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/

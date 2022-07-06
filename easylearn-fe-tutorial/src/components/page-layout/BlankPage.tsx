@@ -1,6 +1,7 @@
-import React, { FC, ReactNode, useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import { useConfig } from '@packages/core/config';
 import { CssBaseline } from '@mui/material';
+import { MuiToasterSubscriber, useSubscribableToaster } from '@packages/core/toaster';
 
 export type BlankPageProps = {
     title: string;
@@ -9,6 +10,7 @@ export type BlankPageProps = {
 
 export const BlankPage: FC<BlankPageProps> = (props) => {
     const { companyName } = useConfig();
+    const toaster = useSubscribableToaster();
     const titleParts: string[] = [];
     if (props.title) {
         titleParts.push(props.title);
@@ -26,6 +28,7 @@ export const BlankPage: FC<BlankPageProps> = (props) => {
         <>
             <CssBaseline />
             {props.children}
+            <MuiToasterSubscriber toaster={toaster} />
         </>
     );
 };

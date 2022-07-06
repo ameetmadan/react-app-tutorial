@@ -1,6 +1,6 @@
 // src/packages/core/routing/Link.tsx
 
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { Link as MuiLink, LinkProps as MuiLinkProps } from '@mui/material';
 import { Link as ReactRouterDomLink } from 'react-router-dom';
 

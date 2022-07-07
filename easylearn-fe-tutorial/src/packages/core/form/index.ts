@@ -6,3 +6,5 @@ export * from './TextField';
 export * from './Checkbox';
 export * from './Form';
 export * from './Button';
+export * from './CoreSelection';
+export * from './SingleSelection';

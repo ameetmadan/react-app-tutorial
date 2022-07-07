@@ -12,7 +12,12 @@
         "languages": {
             "enUS": "English (US)",
             "deCH": "Deutsch (CH)"
-        }
+        },
+        "form": {
+            "selection":{
+              "choose": "Please choose"
+            }
+          }
     },
     "pages": {
         "indexPage": {
@@ -25,7 +30,13 @@
             "password": "Password",
             "agreeOnTermsAndConditions": "I agree on the {{termsAndConditions}}.",
             "termsAndConditions": "terms and conditions",
-            "signUp": "Sign up"
+            "signUp": "Sign up",
+            "gender": "Gender",
+        "genderOptions": {
+            "female": "Female",
+            "male": "Male",
+            "other": "Other"
+        }
         }
     }
 }

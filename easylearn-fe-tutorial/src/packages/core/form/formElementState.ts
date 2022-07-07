@@ -1,4 +1,5 @@
 import { Translation } from '@packages/core/i18n';
+import { Entry } from '../collection';
 
 export type Message = {
     id: string;
@@ -23,6 +24,25 @@ export type FieldMessage = {
 export enum FormElementTypes {
     TEXT_FIELD = 'textField-c615d5de',
     CHECKBOX = 'checkbox-c615d5de',
+    SINGLE_SELECTION = 'singleSelection-c615d5de',
+}
+
+// Create a new form element state for a single selection:
+export type SingleSelectionState<D = any> = GenericFormElementState<
+    FormElementTypes.SINGLE_SELECTION,
+    { chosenOption: null | Entry<D>; messages: Message[] }
+>;
+
+// Write a single state selection factory function, to reuse it later:
+export function createSingleSelectionState<D = any>(
+    partial: Partial<Omit<SingleSelectionState, 'type'>> = {}
+): SingleSelectionState<D> {
+    return {
+        messages: [],
+        chosenOption: null,
+        ...partial,
+        type: FormElementTypes.SINGLE_SELECTION,
+    };
 }
 
 type GenericFormElementState<T extends FormElementTypes, P extends object = {}> = {
@@ -62,4 +82,5 @@ export function createCheckboxState(partial: Partial<Omit<CheckboxState, 'type'>
     };
 }
 
-export type FormElementState = TextFieldState | CheckboxState;
+// Add the state to the FormElementState union type:
+export type FormElementState = TextFieldState | CheckboxState | SingleSelectionState;

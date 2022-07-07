@@ -12,6 +12,11 @@
       "languages": {
         "enUS": "English (US)",
         "deCH": "Deutsch (CH)"
+      },
+      "form": {
+        "selection":{
+          "choose": "Bitte auswählen"
+        }
       }
     },
     "pages": {
@@ -25,7 +30,13 @@
         "password": "Passwort",
         "agreeOnTermsAndConditions": "Ich bin mit den {{termsAndConditions}} einverstanden.",
         "termsAndConditions": "AGB",
-        "signUp": "Registrieren"
+        "signUp": "Registrieren",
+        "gender": "Geschlecht",
+        "genderOptions": {
+            "female": "Weiblich",
+            "male": "Männlich",
+            "other": "Andere"
+        }
     }
     }
   }

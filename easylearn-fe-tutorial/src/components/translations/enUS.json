@@ -14,10 +14,13 @@
             "deCH": "Deutsch (CH)"
         },
         "form": {
-            "selection":{
-              "choose": "Please choose"
+            "selection": {
+                "choose": "Please choose"
             }
-          }
+        },
+        "util": {
+            "connectionToServerFailed": "Connection to server failed."
+        }
     },
     "pages": {
         "indexPage": {
@@ -32,11 +35,17 @@
             "termsAndConditions": "terms and conditions",
             "signUp": "Sign up",
             "gender": "Gender",
-        "genderOptions": {
-            "female": "Female",
-            "male": "Male",
-            "other": "Other"
+            "genderOptions": {
+                "female": "Female",
+                "male": "Male",
+                "other": "Other"
+            }
         }
+    },
+    "api": {
+        "v1": {
+            "formErrors": "You have some errors in your form!",
+            "invalidValue": "Invalid value"
         }
     }
 }

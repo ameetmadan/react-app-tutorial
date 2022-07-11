@@ -4,6 +4,7 @@ module.exports = {
     arrowParens: 'always',
     bracketSpacing: true,
     bracketSameLine: true,
+    embeddedLanguageFormatting: 'auto',
     jsxSingleQuote: false,
     printWidth: 120,
     quoteProps: 'as-needed',

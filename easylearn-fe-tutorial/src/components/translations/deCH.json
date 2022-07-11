@@ -1,42 +1,51 @@
 {
     "core": {
-      "currentUser": {
-        "guestDisplayName": "Gast"
-      },
-      "nav": {
-        "logout": "Ausloggen",
-        "login": "Anmelden",
-        "signUp": "Registrieren",
-        "mySettings": "Einstellungen"
-      },
-      "languages": {
-        "enUS": "English (US)",
-        "deCH": "Deutsch (CH)"
-      },
-      "form": {
-        "selection":{
-          "choose": "Bitte auswählen"
-        }
-      }
+        "currentUser": {
+            "guestDisplayName": "Gast"
+        },
+        "nav": {
+            "logout": "Ausloggen",
+            "login": "Anmelden",
+            "signUp": "Registrieren",
+            "mySettings": "Einstellungen"
+        },
+        "languages": {
+            "enUS": "English (US)",
+            "deCH": "Deutsch (CH)"
+        },
+        "form": {
+            "selection": {
+                "choose": "Bitte auswählen"
+            }
+        },
+        "util": {
+            "connectionToServerFailed": "Verbindung zum Server konnte nicht hergestellt werden."
+        } 
     },
     "pages": {
-      "indexPage": {
-        "greeting": "Hallo {{username}}!"
-      },
-      "registerPage": {
-        "title": "Registrieren",
-        "username": "Benutzername",
-        "email": "E-Mail Adresse",
-        "password": "Passwort",
-        "agreeOnTermsAndConditions": "Ich bin mit den {{termsAndConditions}} einverstanden.",
-        "termsAndConditions": "AGB",
-        "signUp": "Registrieren",
-        "gender": "Geschlecht",
-        "genderOptions": {
-            "female": "Weiblich",
-            "male": "Männlich",
-            "other": "Andere"
+        "indexPage": {
+            "greeting": "Hallo {{username}}!"
+        },
+        "registerPage": {
+            "title": "Registrieren",
+            "username": "Benutzername",
+            "email": "E-Mail Adresse",
+            "password": "Passwort",
+            "agreeOnTermsAndConditions": "Ich bin mit den {{termsAndConditions}} einverstanden.",
+            "termsAndConditions": "AGB",
+            "signUp": "Registrieren",
+            "gender": "Geschlecht",
+            "genderOptions": {
+                "female": "Weiblich",
+                "male": "Männlich",
+                "other": "Andere"
+            }
+        }
+    },
+    "api": {
+        "v1": {
+            "formErrors": "Ihre Formulardaten sind fehlerhaft!",
+            "invalidValue": "Ungültiger Wert"
         }
     }
-    }
-  }
+}

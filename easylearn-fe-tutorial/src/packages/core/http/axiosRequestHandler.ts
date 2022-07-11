@@ -6,7 +6,7 @@ import { RequestExecutionConfig, RequestHandler, RequestResponse } from './reque
 
 // RequestResponse takes props:
 // 1. request of type Request (see request.ts)
-// 2. response either of type undefined or of AxiosResponse (see type defintions of library) 
+// 2. response either of type undefined or of AxiosResponse (see type defintions of library)
 // 3. request cancellation status of type boolean
 function createRequestResponse(
     request: Request,
@@ -32,7 +32,7 @@ function createRequestResponse(
 //  method: '',
 //  baseURL: '',
 //  data: {
-//     /* all data necessary to be sent along */ 
+//     /* all data necessary to be sent along */
 //  },
 //  headers: {},
 // }

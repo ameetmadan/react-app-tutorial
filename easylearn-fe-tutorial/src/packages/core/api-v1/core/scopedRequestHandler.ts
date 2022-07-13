@@ -14,6 +14,8 @@ export class ScopedApiV1RequestHandler implements ApiV1RequestHandler {
     private readonly middlewares: ApiV1RequestHandlerMiddleware[];
     private readonly requestHandler: ApiV1RequestHandler;
     private runningRequestIds: string[];
+    // collect requests based on component and cancels all when the component is unmounted
+    // all requests are then finally handled by the requestHandler
 
     constructor(requestHandler: ApiV1RequestHandler) {
         this.middlewares = [];

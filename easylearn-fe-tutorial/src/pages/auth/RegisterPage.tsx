@@ -15,11 +15,7 @@ import {
 } from '@packages/core/form';
 import { FunctionalLink } from '@packages/core/routing';
 import { Typography } from '@mui/material';
-import {
-    createSingleSelectionState,
-    SingleSelectionState,
-    // others...
-} from '@packages/core/form';
+import { createSingleSelectionState, SingleSelectionState } from '@packages/core/form';
 
 // Add the following import statements
 import { SingleSelection } from '@packages/core/form/SingleSelection';
